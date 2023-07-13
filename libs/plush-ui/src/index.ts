@@ -1,1 +1,1 @@
-export * from "./lib/plush-ui.module";
+export * from './lib/plush-ui.module';

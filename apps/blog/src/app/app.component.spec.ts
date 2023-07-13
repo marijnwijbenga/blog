@@ -1,8 +1,8 @@
-import { TestBed } from "@angular/core/testing";
-import { AppComponent } from "./app.component";
-import { RouterTestingModule } from "@angular/router/testing";
+import { TestBed } from '@angular/core/testing';
+import { AppComponent } from './app.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
-describe("AppComponent", () => {
+describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [RouterTestingModule],
@@ -10,16 +10,16 @@ describe("AppComponent", () => {
     }).compileComponents();
   });
 
-  it("should render title", () => {
+  it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector("h1")?.textContent).toContain("Welcome blog");
+    expect(compiled.querySelector('h1')?.textContent).toContain('Welcome blog');
   });
 
   it("should have as title 'blog'", () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual("blog");
+    expect(app.title).toEqual('blog');
   });
 });
