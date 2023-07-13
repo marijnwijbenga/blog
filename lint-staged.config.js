@@ -2,9 +2,8 @@ module.exports = {
   '{apps,libs}/**/*.{ts,tsx,html}': files => {
     return `nx affected --target=typecheck --files=${files.join(',')}`;
   },
-  '{apps,libs}/**/*.{js,ts,jsx,tsx,json,html}': files => {
-    const lintCommands = files.map(file => `eslint --fix ${file}`);
-    const formatCommand = `nx format:write --files=${files.join(',')}`;
-    return [...lintCommands, formatCommand];
-  },
+  '{apps,libs}/**/*.{js,ts,jsx,tsx,json,html}': [
+    files => `eslint --fix ${files.join(' ')}`,
+    files => `nx format:write --files=${files.join(',')}`,
+  ],
 };
