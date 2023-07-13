@@ -17,14 +17,9 @@
     "paths": {
       "@portfolio-nx-workspace/plush-ui": ["libs/plush-ui/src/index.ts"]
     },
-
-    // ts rules
-
     "strict": true,
-
     "noImplicitAny": true,
-    "strictNullChecks": true,
-
+    "strictNullChecks": true
   },
   "exclude": ["node_modules", "tmp"]
 }
