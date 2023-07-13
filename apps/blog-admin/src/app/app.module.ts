@@ -9,7 +9,9 @@ import { PlushUiModule } from '@portfolio-nx-workspace/plush-ui';
     declarations: [AppComponent],
     imports: [
         BrowserModule,
-        RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
+        RouterModule.forRoot(appRoutes, {
+            initialNavigation: 'enabledBlocking',
+        }),
         PlushUiModule,
     ],
     providers: [],
