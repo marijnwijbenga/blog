@@ -14,7 +14,17 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@portfolio-nx-workspace/plush-ui": ["libs/plush-ui/src/index.ts"]
+    },
+
+    // ts rules
+
+    "strict": true,
+
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+
   },
   "exclude": ["node_modules", "tmp"]
 }
