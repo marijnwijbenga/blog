@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { ButtonComponent } from './button';
 
 @NgModule({
-  declarations: [ButtonComponent],
-  exports: [ButtonComponent],
-  imports: [CommonModule],
+    declarations: [ButtonComponent],
+    exports: [ButtonComponent],
+    imports: [CommonModule],
 })
 export class PlushCoreUiModule {}

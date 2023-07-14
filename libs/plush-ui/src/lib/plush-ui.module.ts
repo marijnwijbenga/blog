@@ -4,8 +4,8 @@ import { PlushCommonUiModule } from './components/common/common-ui.module';
 import { PlushCoreUiModule } from './components/core/core-ui.module';
 
 @NgModule({
-  imports: [CommonModule],
-  declarations: [],
-  exports: [PlushCommonUiModule, PlushCoreUiModule],
+    imports: [CommonModule],
+    declarations: [],
+    exports: [PlushCommonUiModule, PlushCoreUiModule],
 })
 export class PlushUiModule {}
