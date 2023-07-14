@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
     public title = 2;
     public myFun = (): string => {
+        console.log('test');
         return 'string';
     };
 }
