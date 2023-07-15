@@ -7,4 +7,4 @@ import { ButtonComponent } from './button';
     exports: [ButtonComponent],
     imports: [CommonModule],
 })
-export class PlushCoreUiModule {}
+export class PlushCoreModule {}
