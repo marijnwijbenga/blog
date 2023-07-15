@@ -19,7 +19,13 @@
                     "apps/blog-admin/src/favicon.ico",
                     "apps/blog-admin/src/assets"
                 ],
-                "styles": ["apps/blog-admin/src/styles.scss"],
+                "styles": [
+                    "libs/plush-ui/src/lib/assets/css/plush-ui.scss",
+                    "apps/blog-admin/src/styles.scss"
+                ],
+                "stylePreprocessorOptions": {
+                    "includePaths": ["libs/plush-ui/src/lib/assets/css"]
+                },
                 "scripts": []
             },
             "configurations": {
