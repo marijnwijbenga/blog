@@ -8,4 +8,7 @@ import { test } from '@angular-devkit/core/src/virtual-fs/host';
 })
 export class ButtonComponent {
     protected readonly test = test;
+    public myFun = (param: number): boolean => {
+        return param < 5;
+    };
 }
