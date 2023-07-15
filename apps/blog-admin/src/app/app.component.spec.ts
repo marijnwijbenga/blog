@@ -10,6 +10,13 @@ describe('AppComponent', () => {
         }).compileComponents();
     });
 
+    it('should render the component', () => {
+        const fixture = TestBed.createComponent(AppComponent);
+        const app = fixture.componentInstance;
+
+        expect(app).toBeDefined();
+    });
+
     // it('should render title', () => {
     //     const fixture = TestBed.createComponent(AppComponent);
     //     fixture.detectChanges();
