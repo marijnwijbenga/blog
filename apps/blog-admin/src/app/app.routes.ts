@@ -1,5 +1,5 @@
 import { Route } from '@angular/router';
-import { DashboardLayoutComponent } from './pages/layout/dashboard-layout/dashboard-layout.component';
+import { DashboardLayoutComponent } from './layout/dashboard-layout/dashboard-layout.component';
 
 export const appRoutes: Route[] = [
     {
