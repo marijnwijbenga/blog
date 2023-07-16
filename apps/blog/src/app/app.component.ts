@@ -5,9 +5,4 @@ import { Component } from '@angular/core';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-    public title = 2;
-    public myFun = (): string => {
-        return 'string';
-    };
-}
+export class AppComponent {}

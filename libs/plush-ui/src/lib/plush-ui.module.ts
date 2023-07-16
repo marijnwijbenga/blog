@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PlushCommonUiModule } from './components/common/common-ui.module';
-import { PlushCoreUiModule } from './components/core/core-ui.module';
+import { PlushCommonModule } from './components/common/common-ui.module';
+import { PlushCoreModule } from './components/core/core.module';
+import { PlushLayoutModule } from './components/layout/layout.module';
 
 @NgModule({
-  imports: [CommonModule],
-  declarations: [],
-  exports: [PlushCommonUiModule, PlushCoreUiModule],
+    imports: [CommonModule],
+    declarations: [],
+    exports: [PlushCommonModule, PlushCoreModule, PlushLayoutModule],
 })
 export class PlushUiModule {}

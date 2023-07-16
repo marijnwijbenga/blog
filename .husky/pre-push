@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+npx nx affected -t test --base=develop
+
