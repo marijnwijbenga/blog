@@ -1,9 +1,18 @@
 import { Route } from '@angular/router';
+import { DashboardLayoutComponent } from './pages/layout/dashboard-layout/dashboard-layout.component';
 
 export const appRoutes: Route[] = [
     {
-        path: 'write',
-        loadChildren: () =>
-            import('./pages/write/write.module').then((m) => m.WritePageModule),
+        path: '',
+        component: DashboardLayoutComponent,
+        children: [
+            {
+                path: 'write',
+                loadChildren: () =>
+                    import('./pages/write/write.page.module').then(
+                        (m) => m.WritePageModule
+                    ),
+            },
+        ],
     },
 ];
