@@ -10,7 +10,7 @@ export const appRoutes: Route[] = [
                 path: 'write',
                 loadChildren: () =>
                     import('./pages/write/write.page.module').then(
-                        (m) => m.WritePageModule
+                        (module) => module.WritePageModule
                     ),
             },
         ],

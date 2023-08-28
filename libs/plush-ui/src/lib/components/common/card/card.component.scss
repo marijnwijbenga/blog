@@ -1,0 +1,8 @@
+@use "variables/colors";
+@use "variables/roundness";
+
+.card {
+    background-color: colors.$card-background;
+    border-radius: roundness.$roundness-md;
+    padding: 20rem;
+}

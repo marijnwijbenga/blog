@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { PanelComponent } from './panel.component';
+import { MdCheatsheetComponent } from './md-cheatsheet.component';
 
-describe('PanelComponent', () => {
-    let component: PanelComponent;
-    let fixture: ComponentFixture<PanelComponent>;
+describe('MdCheatsheetComponent', () => {
+    let component: MdCheatsheetComponent;
+    let fixture: ComponentFixture<MdCheatsheetComponent>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [PanelComponent],
+            declarations: [MdCheatsheetComponent],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(PanelComponent);
+        fixture = TestBed.createComponent(MdCheatsheetComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

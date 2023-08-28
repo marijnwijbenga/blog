@@ -1,6 +1,6 @@
 <!--
     here we need:
-    todo card component with expandable markdown cheatsheet
+    todo: card component with expandable markdown cheatsheet
     select input component for pill creation (tags)
     pill components
     the document component for writing content
@@ -8,19 +8,21 @@
 -->
 
 <pui-bar>
-    <pui-panel>
+    <pui-column>
         fancy left panel
-        <pui-panel-item> left panel item 1 </pui-panel-item>
-        <pui-panel-item> left panel item 2 </pui-panel-item>
-    </pui-panel>
-    <pui-panel>
+        <pui-row>
+            <bap-md-cheatsheet></bap-md-cheatsheet>
+        </pui-row>
+        <pui-row> left panel item 2 </pui-row>
+    </pui-column>
+    <pui-column>
         fancy middle panel
-        <pui-panel-item> middle panel item 1 </pui-panel-item>
-        <pui-panel-item> middle panel item 2 </pui-panel-item>
-    </pui-panel>
-    <pui-panel>
+        <pui-row> middle panel item 1 </pui-row>
+        <pui-row> middle panel item 2 </pui-row>
+    </pui-column>
+    <pui-column>
         fancy right panel
-        <pui-panel-item> right panel item 1 </pui-panel-item>
-        <pui-panel-item> right panel item 2 </pui-panel-item>
-    </pui-panel>
+        <pui-row> right panel item 1 </pui-row>
+        <pui-row> right panel item 2 </pui-row>
+    </pui-column>
 </pui-bar>

@@ -1,72 +1,83 @@
 {
-  "name": "plush-ui",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/plush-ui/src",
-  "prefix": "pui",
-  "tags": [],
-  "projectType": "library",
-  "targets": {
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
-      "options": {
-        "jestConfig": "libs/plush-ui/jest.config.ts",
-        "passWithNoTests": true
-      },
-      "configurations": {
-        "ci": {
-          "ci": true,
-          "codeCoverage": true
+    "name": "plush-ui",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "libs/plush-ui/src",
+    "prefix": "pui",
+    "tags": [],
+    "projectType": "library",
+    "targets": {
+        "test": {
+            "executor": "@nx/jest:jest",
+            "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+            "options": {
+                "jestConfig": "libs/plush-ui/jest.config.ts",
+                "passWithNoTests": true
+            },
+            "configurations": {
+                "ci": {
+                    "ci": true,
+                    "codeCoverage": true
+                }
+            }
+        },
+        "lint": {
+            "executor": "@nx/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": [
+                    "libs/plush-ui/**/*.ts",
+                    "libs/plush-ui/**/*.html"
+                ]
+            }
+        },
+        "storybook": {
+            "executor": "@storybook/angular:start-storybook",
+            "options": {
+                "port": 4400,
+                "configDir": "libs/plush-ui/.storybook",
+                "browserTarget": "plush-ui:build-storybook",
+                "compodoc": false,
+                "styles": ["libs/plush-ui/src/lib/assets/css/plush-ui.scss"],
+                "stylePreprocessorOptions": {
+                    "includePaths": ["libs/plush-ui/src/lib/assets/css"]
+                }
+            },
+            "configurations": {
+                "ci": {
+                    "quiet": true
+                }
+            }
+        },
+        "build-storybook": {
+            "executor": "@storybook/angular:build-storybook",
+            "outputs": ["{options.outputDir}"],
+            "options": {
+                "outputDir": "dist/storybook/plush-ui",
+                "configDir": "libs/plush-ui/.storybook",
+                "browserTarget": "plush-ui:build-storybook",
+                "compodoc": false,
+                "styles": ["libs/plush-ui/src/lib/assets/css/plush-ui.scss"],
+                "stylePreprocessorOptions": {
+                    "includePaths": ["libs/plush-ui/src/lib/assets/css"]
+                }
+            },
+            "configurations": {
+                "ci": {
+                    "quiet": true
+                }
+            }
+        },
+        "static-storybook": {
+            "executor": "@nx/web:file-server",
+            "options": {
+                "buildTarget": "plush-ui:build-storybook",
+                "staticFilePath": "dist/storybook/plush-ui"
+            },
+            "configurations": {
+                "ci": {
+                    "buildTarget": "plush-ui:build-storybook:ci"
+                }
+            }
         }
-      }
-    },
-    "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["libs/plush-ui/**/*.ts", "libs/plush-ui/**/*.html"]
-      }
-    },
-    "storybook": {
-      "executor": "@storybook/angular:start-storybook",
-      "options": {
-        "port": 4400,
-        "configDir": "libs/plush-ui/.storybook",
-        "browserTarget": "plush-ui:build-storybook",
-        "compodoc": false
-      },
-      "configurations": {
-        "ci": {
-          "quiet": true
-        }
-      }
-    },
-    "build-storybook": {
-      "executor": "@storybook/angular:build-storybook",
-      "outputs": ["{options.outputDir}"],
-      "options": {
-        "outputDir": "dist/storybook/plush-ui",
-        "configDir": "libs/plush-ui/.storybook",
-        "browserTarget": "plush-ui:build-storybook",
-        "compodoc": false
-      },
-      "configurations": {
-        "ci": {
-          "quiet": true
-        }
-      }
-    },
-    "static-storybook": {
-      "executor": "@nx/web:file-server",
-      "options": {
-        "buildTarget": "plush-ui:build-storybook",
-        "staticFilePath": "dist/storybook/plush-ui"
-      },
-      "configurations": {
-        "ci": {
-          "buildTarget": "plush-ui:build-storybook:ci"
-        }
-      }
     }
-  }
 }

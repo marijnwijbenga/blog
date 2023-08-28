@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { PanelItemComponent } from './panel-item.component';
+import { RowComponent } from './row.component';
 
 describe('PanelItemComponent', () => {
-    let component: PanelItemComponent;
-    let fixture: ComponentFixture<PanelItemComponent>;
+    let component: RowComponent;
+    let fixture: ComponentFixture<RowComponent>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [PanelItemComponent],
+            declarations: [RowComponent],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(PanelItemComponent);
+        fixture = TestBed.createComponent(RowComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

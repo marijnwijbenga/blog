@@ -1,7 +1,7 @@
-@use "variables/palette";
+@use "variables/colors";
 
 .page {
     width: 100%;
     min-height: 100vh;
-    background-color: palette.$grey-900;
+    background-color: colors.$page-background;
 }

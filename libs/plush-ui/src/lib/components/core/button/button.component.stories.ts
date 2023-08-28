@@ -1,17 +1,20 @@
-import { Meta } from "@storybook/angular";
-import { ButtonComponent } from "./button.component";
+import { Meta, StoryObj } from '@storybook/angular';
+import { ButtonComponent } from './button.component';
+import { CardComponent } from '../../common/card/card.component';
 
 export default {
-  title: "ButtonComponent",
-  component: ButtonComponent,
+    title: 'Components/Core/Button',
+    component: ButtonComponent,
 } as Meta<ButtonComponent>;
 
-export const Primary = {
-  render: (args: ButtonComponent) => ({
-    template: `
+type Story = StoryObj<ButtonComponent>;
+
+export const Primary: Story = {
+    render: (args: ButtonComponent) => ({
+        template: `
     <pui-button>Amazink!</pui-button>
     `,
-    props: args,
-  }),
-  args: {},
+        props: args,
+    }),
+    args: {},
 };
