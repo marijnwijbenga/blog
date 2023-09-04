@@ -2,7 +2,7 @@ import { Meta } from '@storybook/angular';
 import { HeaderComponent } from './header.component';
 
 export default {
-    title: 'HeaderComponent',
+    title: 'Components/Layout/Header',
     component: HeaderComponent,
 } as Meta<HeaderComponent>;
 

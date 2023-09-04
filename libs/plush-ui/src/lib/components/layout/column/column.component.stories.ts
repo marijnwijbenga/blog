@@ -2,7 +2,7 @@ import { Meta } from '@storybook/angular';
 import { ColumnComponent } from './column.component';
 
 export default {
-    title: 'ColumnComponent',
+    title: 'Components/Layout/Column',
     component: ColumnComponent,
 } as Meta<ColumnComponent>;
 

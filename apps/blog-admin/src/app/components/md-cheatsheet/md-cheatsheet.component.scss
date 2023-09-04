@@ -1,0 +1,35 @@
+.md-cheatsheet {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.md-cheatsheet--expanded {
+    margin: 1.8rem 1.2rem 0 1.2rem;
+}
+
+.md-cheatsheet__header {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    cursor: pointer;
+    user-select: none;
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.7rem;
+    line-height: 1;
+    align-items: center;
+}
+
+.md-cheatsheet__header-title {
+    align-self: center;
+}
+
+.md-cheatsheet__header-icon {
+    align-self: center;
+    height: 2.4rem;
+}
+.md-cheatsheet__content {
+    padding: 2rem 0;
+    color: var(--body-text-on-dark);
+}

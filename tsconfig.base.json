@@ -15,6 +15,9 @@
         "skipDefaultLibCheck": true,
         "baseUrl": ".",
         "paths": {
+            "@portfolio-nx-workspace/blog-admin-data": [
+                "libs/blog-admin-data/src/index.ts"
+            ],
             "@portfolio-nx-workspace/plush-ui": ["libs/plush-ui/src/index.ts"]
         },
         "strict": true,

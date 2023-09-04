@@ -2,7 +2,7 @@ import { Meta } from '@storybook/angular';
 import { LayoutComponent } from './layout.component';
 
 export default {
-    title: 'LayoutComponent',
+    title: 'Components/Layout/Layout',
     component: LayoutComponent,
 } as Meta<LayoutComponent>;
 

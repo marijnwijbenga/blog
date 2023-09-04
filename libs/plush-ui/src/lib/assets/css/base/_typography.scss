@@ -1,9 +1,11 @@
 @use "variables/fonts";
+@use "variables/colors";
 
 body {
     line-height: 1.7;
     font-size: 1.6rem;
     font-family: fonts.$body-text;
+    color: colors.$body-text-on-dark;
 }
 
 h1,

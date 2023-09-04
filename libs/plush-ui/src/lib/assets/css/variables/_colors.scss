@@ -1,5 +1,12 @@
 @use "variables/palette";
 
+$primary: palette.$indigo-400;
+
 $page-background: palette.$grey-900;
+
 $card-background: palette.$grey-800;
+
+// text
+$body-text: palette.$grey-900;
+$body-text-on-dark: palette.$grey-200;
 

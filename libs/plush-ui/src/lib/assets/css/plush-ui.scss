@@ -1,1 +1,12 @@
 @use "base";
+@use "variables/palette";
+@use "variables/colors";
+
+:root {
+    // titles
+    --primary: #{colors.$primary};
+
+    // text
+    --body-text: #{colors.$body-text};
+    --body-text-on-dark: #{colors.$body-text-on-dark};
+}

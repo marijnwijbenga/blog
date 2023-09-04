@@ -15,7 +15,20 @@
                 "main": "apps/blog/src/main.ts",
                 "polyfills": ["zone.js"],
                 "tsConfig": "apps/blog/tsconfig.app.json",
-                "assets": ["apps/blog/src/favicon.ico", "apps/blog/src/assets"],
+                "assets": [
+                    {
+                        "glob": "**/*",
+                        "input": "apps/blog-admin/src/assets/",
+                        "output": "./assets/"
+                    },
+                    {
+                        "glob": "**/*",
+                        "input": "libs/plush-ui/src/lib/assets/",
+                        "output": "./assets/"
+                    },
+                    "apps/blog/src/favicon.ico",
+                    "apps/blog/src/assets"
+                ],
                 "styles": ["apps/blog/src/styles.scss"],
                 "scripts": []
             },

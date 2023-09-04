@@ -2,7 +2,7 @@ import { Meta } from '@storybook/angular';
 import { PageComponent } from './page.component';
 
 export default {
-    title: 'PageComponent',
+    title: 'Components/Layout/Page',
     component: PageComponent,
 } as Meta<PageComponent>;
 

@@ -1,4 +1,14 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+echo -e "\e[32mRunning lint checks...\e[0m"
 npx lint-staged --concurrent false --relative
+
+sleep 2
+
+echo -e "\e[32mRunning affected tests...\e[0m"
+npx nx affected -t test --base=develop --code-coverage
+
+sleep 2
+
+echo -e "\e[32All done! \e[0m"

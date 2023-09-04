@@ -7,22 +7,25 @@
     4 buttons of variant iconOnly/small with labels and icons
 -->
 
+<!-- todo: make pui-bar into flex container/grid container-->
 <pui-bar>
     <pui-column>
-        fancy left panel
         <pui-row>
-            <bap-md-cheatsheet></bap-md-cheatsheet>
+            <bap-md-cheatsheet
+                *ngIf="!error"
+                [cheatSheetData]="cheatSheetData"
+            ></bap-md-cheatsheet>
         </pui-row>
-        <pui-row> left panel item 2 </pui-row>
+        <pui-row> left panel item 2</pui-row>
     </pui-column>
     <pui-column>
         fancy middle panel
-        <pui-row> middle panel item 1 </pui-row>
-        <pui-row> middle panel item 2 </pui-row>
+        <pui-row> middle panel item 1</pui-row>
+        <pui-row> middle panel item 2</pui-row>
     </pui-column>
     <pui-column>
         fancy right panel
-        <pui-row> right panel item 1 </pui-row>
-        <pui-row> right panel item 2 </pui-row>
+        <pui-row> right panel item 1</pui-row>
+        <pui-row> right panel item 2</pui-row>
     </pui-column>
 </pui-bar>

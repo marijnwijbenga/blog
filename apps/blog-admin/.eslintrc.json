@@ -1,111 +1,128 @@
 {
-  "extends": ["../../.eslintrc.json"],
-  "ignorePatterns": ["!**/*"],
-  "overrides": [
-    {
-      "files": ["*.ts"],
-      "parserOptions": {
-        "project": ["apps/blog-admin/tsconfig.*?.json"]
-      },
-      "rules": {
-        "@typescript-eslint/no-inferrable-types": "off",
-        "@typescript-eslint/explicit-function-return-type": ["error"],
-        "@typescript-eslint/explicit-member-accessibility": [
-          "error",
-          { "overrides": { "constructors": "off" } }
-        ],
-        "@typescript-eslint/no-use-before-define": "error",
-        "@typescript-eslint/naming-convention": [
-          "error",
-          {
-            "selector": "enumMember",
-            "format": ["PascalCase"]
-          },
-          {
-            "selector": "typeAlias",
-            "format": ["PascalCase"]
-          },
-          {
-            "selector": "variable",
-            "types": ["boolean"],
-            "format": ["PascalCase"],
-            "prefix": ["can", "has", "is", "show", "should"]
-          },
-          {
-            "selector": "variableLike",
-            "format": ["camelCase"]
-          },
-          {
-            "selector": "variable",
-            "format": ["camelCase", "UPPER_CASE"],
-            "leadingUnderscore": "allow",
-            "trailingUnderscore": "allow"
-          }
-        ],
-        "array-bracket-newline": ["error", { "multiline": true }],
-        "array-bracket-spacing": ["error", "never"],
-        "comma-dangle": [
-          "error",
-          {
-            "arrays": "always-multiline",
-            "exports": "always-multiline",
-            "functions": "never",
-            "imports": "always-multiline",
-            "objects": "always-multiline"
-          }
-        ],
-        "indent": ["error", 4],
-        "lines-between-class-members": [
-          "error",
-          "always",
-          { "exceptAfterSingleLine": true }
-        ],
+    "extends": ["../../.eslintrc.json"],
+    "ignorePatterns": ["!**/*"],
+    "overrides": [
+        {
+            "files": ["*.ts"],
+            "parserOptions": {
+                "project": ["apps/blog-admin/tsconfig.*?.json"]
+            },
+            "rules": {
+                "@typescript-eslint/no-inferrable-types": "off",
+                "@typescript-eslint/explicit-function-return-type": ["error"],
+                "@typescript-eslint/explicit-member-accessibility": [
+                    "error",
+                    {
+                        "overrides": {
+                            "constructors": "off",
+                            "methods": {
+                                "accessibility": "explicit",
+                                "ignoredMethodNames": [
+                                    "ngOnInit",
+                                    "ngOnChanges",
+                                    "ngDoCheck",
+                                    "ngAfterContentInit",
+                                    "ngAfterContentChecked",
+                                    "ngAfterViewInit",
+                                    "ngAfterViewChecked",
+                                    "ngOnDestroy"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "@typescript-eslint/no-use-before-define": "error",
+                "@typescript-eslint/naming-convention": [
+                    "error",
+                    {
+                        "selector": "enumMember",
+                        "format": ["PascalCase"]
+                    },
+                    {
+                        "selector": "typeAlias",
+                        "format": ["PascalCase"]
+                    },
+                    {
+                        "selector": "variable",
+                        "types": ["boolean"],
+                        "format": ["PascalCase"],
+                        "prefix": ["can", "has", "is", "show", "should"]
+                    },
+                    {
+                        "selector": "variableLike",
+                        "format": ["camelCase"]
+                    },
+                    {
+                        "selector": "variable",
+                        "format": ["camelCase", "UPPER_CASE"],
+                        "leadingUnderscore": "allow",
+                        "trailingUnderscore": "allow"
+                    }
+                ],
+                "array-bracket-newline": ["error", { "multiline": true }],
+                "array-bracket-spacing": ["error", "never"],
+                "comma-dangle": [
+                    "error",
+                    {
+                        "arrays": "always-multiline",
+                        "exports": "always-multiline",
+                        "functions": "never",
+                        "imports": "always-multiline",
+                        "objects": "always-multiline"
+                    }
+                ],
+                "indent": ["error", 4],
+                "lines-between-class-members": [
+                    "error",
+                    "always",
+                    { "exceptAfterSingleLine": true }
+                ],
 
-        "no-empty-function": [
-          "error",
-          {
-            "allow": ["arrowFunctions", "constructors"]
-          }
-        ],
-        "no-multi-spaces": "error",
-        "no-multiple-empty-lines": ["error", { "max": 1 }],
-        "no-trailing-spaces": "error",
-        "object-curly-newline": "off",
-        "object-curly-spacing": [
-          "error",
-          "always",
-          {
-            "objectsInObjects": false,
-            "arraysInObjects": false
-          }
-        ],
-        "quotes": ["error", "single"],
-        "@angular-eslint/directive-selector": [
-          "error",
-          {
-            "type": "attribute",
-            "prefix": "bap",
-            "style": "camelCase"
-          }
-        ],
-        "@angular-eslint/component-selector": [
-          "error",
-          {
-            "type": "element",
-            "prefix": "bap",
-            "style": "kebab-case"
-          }
-        ]
-      },
-      "extends": [
-        "plugin:@nx/angular",
-        "plugin:@angular-eslint/template/process-inline-templates"
-      ]
-    },
-    {
-      "files": ["*.html"],
-      "extends": ["plugin:@nx/angular-template"],
-      "rules": {}
-    }
-  ]
+                "no-empty-function": [
+                    "error",
+                    {
+                        "allow": ["arrowFunctions", "constructors"]
+                    }
+                ],
+                "no-multi-spaces": "error",
+                "no-multiple-empty-lines": ["error", { "max": 1 }],
+                "no-trailing-spaces": "error",
+                "object-curly-newline": "off",
+                "object-curly-spacing": [
+                    "error",
+                    "always",
+                    {
+                        "objectsInObjects": false,
+                        "arraysInObjects": false
+                    }
+                ],
+                "quotes": ["error", "single"],
+                "@angular-eslint/directive-selector": [
+                    "error",
+                    {
+                        "type": "attribute",
+                        "prefix": "bap",
+                        "style": "camelCase"
+                    }
+                ],
+                "@angular-eslint/component-selector": [
+                    "error",
+                    {
+                        "type": "element",
+                        "prefix": "bap",
+                        "style": "kebab-case"
+                    }
+                ]
+            },
+            "extends": [
+                "plugin:@nx/angular",
+                "plugin:@angular-eslint/template/process-inline-templates"
+            ]
+        },
+        {
+            "files": ["*.html"],
+            "extends": ["plugin:@nx/angular-template"],
+            "rules": {}
+        }
+    ]
 }

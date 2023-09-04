@@ -17,7 +17,20 @@
                     "error",
                     {
                         "overrides": {
-                            "constructors": "off"
+                            "constructors": "off",
+                            "methods": {
+                                "accessibility": "explicit",
+                                "ignoredMethodNames": [
+                                    "ngOnInit",
+                                    "ngOnChanges",
+                                    "ngDoCheck",
+                                    "ngAfterContentInit",
+                                    "ngAfterContentChecked",
+                                    "ngAfterViewInit",
+                                    "ngAfterViewChecked",
+                                    "ngOnDestroy"
+                                ]
+                            }
                         }
                     }
                 ],

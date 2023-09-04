@@ -1,1 +1,21 @@
-<pui-card> cheatsheet here </pui-card>
+<pui-card>
+    <div class="md-cheatsheet" [class.md-cheatsheet--expanded]="showContent">
+        <div class="md-cheatsheet__header" (click)="onToggleHeader()">
+            <div class="md-cheatsheet__header-title">Markdown Cheatsheet</div>
+            <div class="md-cheatsheet__header-icon">
+                <pui-icon
+                    icon="chevron-selector-vertical"
+                    iconSize="md"
+                ></pui-icon>
+            </div>
+        </div>
+        <div class="md-cheatsheet__content" *ngIf="showContent">
+            <dl *ngFor="let data of cheatSheetData">
+                <dt>{{ data?.title }}</dt>
+                <dd *ngFor="let item of data.items">
+                    {{ item }}
+                </dd>
+            </dl>
+        </div>
+    </div>
+</pui-card>

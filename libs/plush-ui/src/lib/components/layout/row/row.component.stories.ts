@@ -2,7 +2,7 @@ import { Meta } from '@storybook/angular';
 import { RowComponent } from './row.component';
 
 export default {
-    title: 'RowComponent',
+    title: 'Components/Layout/Row',
     component: RowComponent,
 } as Meta<RowComponent>;
 

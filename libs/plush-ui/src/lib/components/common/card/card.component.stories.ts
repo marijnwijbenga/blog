@@ -12,7 +12,5 @@ export const Primary: Story = {
     render: (args: CardComponent) => ({
         props: args,
     }),
-    args: {
-        variant: 'primary',
-    },
+    args: {},
 };
