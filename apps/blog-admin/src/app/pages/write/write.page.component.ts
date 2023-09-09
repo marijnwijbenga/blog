@@ -27,4 +27,9 @@ export class WritePageComponent implements OnInit {
             },
         });
     }
+
+    public onToggleCheatSheet(isToggled: boolean): void {
+        console.log(isToggled);
+        // TODO write to local storage
+    }
 }

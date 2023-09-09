@@ -1,12 +1,15 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IconSizeType } from '../../../types/icon-size.type';
+import { IconSizeType } from '../../../types';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { NgClass } from '@angular/common';
 
 @Component({
+    standalone: true,
     selector: 'pui-icon',
     templateUrl: './icon.component.html',
     styleUrls: ['./icon.component.scss'],
+    imports: [HttpClientModule, NgClass],
 })
 export class IconComponent implements OnInit {
     @Input() public icon: string = 'home';

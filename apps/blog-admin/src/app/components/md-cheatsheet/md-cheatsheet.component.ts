@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CheatSheetDataInterface } from '@portfolio-nx-workspace/blog-admin-data';
 
 @Component({
@@ -8,10 +8,21 @@ import { CheatSheetDataInterface } from '@portfolio-nx-workspace/blog-admin-data
 })
 export class MdCheatsheetComponent {
     @Input() public cheatSheetData: CheatSheetDataInterface[] = [];
+    @Output() public isToggled: EventEmitter<boolean> =
+        new EventEmitter<boolean>();
     public showContent: boolean = false;
 
-    public onToggleHeader(): boolean {
+    public onToggleCheatSheet(): void {
         // todo write setting to local storage
-        return (this.showContent = !this.showContent);
+        this.toggleCheatSheet();
+        this.emitToggle();
+    }
+
+    public emitToggle(): void {
+        this.isToggled.emit(this.showContent);
+    }
+
+    public toggleCheatSheet(): void {
+        this.showContent = !this.showContent;
     }
 }

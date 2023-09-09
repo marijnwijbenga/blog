@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { IconComponent } from './icon.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('IconComponent', () => {
     let component: IconComponent;
@@ -7,7 +8,7 @@ describe('IconComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [IconComponent],
+            imports: [HttpClientTestingModule, IconComponent],
         }).compileComponents();
 
         fixture = TestBed.createComponent(IconComponent);

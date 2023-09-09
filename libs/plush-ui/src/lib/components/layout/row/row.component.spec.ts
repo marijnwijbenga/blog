@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RowComponent } from './row.component';
 
-describe('PanelItemComponent', () => {
+describe('RowComponent', () => {
     let component: RowComponent;
     let fixture: ComponentFixture<RowComponent>;
 

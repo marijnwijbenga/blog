@@ -1,21 +1,21 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ButtonComponent } from './button.component';
+import { GridComponent } from './grid.component';
 
-describe('ButtonComponent', () => {
-    let component: ButtonComponent;
-    let fixture: ComponentFixture<ButtonComponent>;
+describe('GridComponent', () => {
+    let component: GridComponent;
+    let fixture: ComponentFixture<GridComponent>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [ButtonComponent],
+            declarations: [GridComponent],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(ButtonComponent);
+        fixture = TestBed.createComponent(GridComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });
 
-    it('should create!', () => {
+    it('should create', () => {
         expect(component).toBeTruthy();
     });
 });
